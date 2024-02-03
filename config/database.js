@@ -49,7 +49,7 @@ module.exports = ({ env }) => {
     },
     postgres: {
       connection: {
-        connectionString: env('DATABASE_URL'),
+        connectionString: env('DATABASE_URL', 'postgres://postgres.gxxuvzmagodiqbhnptca:HelloWorld@8055@aws-0-ap-southeast-1.pooler.supabase.com:5432/postgres'),
         host: env('DATABASE_HOST', 'localhost'),
         port: env.int('DATABASE_PORT', 5432),
         database: env('DATABASE_NAME', 'strapi'),
